@@ -23,9 +23,37 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            max-width: 70%;
+            width: 60%;
             height: auto;
             z-index: 1;
+        }
+
+        .rotating-image {
+            width: 100%;
+            height: auto;
+            /* Adjust the width as needed */
+            animation: rotate 7s linear infinite;
+            /* Adjust the duration as needed */
+        }
+
+        .center-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: auto;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+                /* Negative value for opposite direction */
+            }
         }
 
         .container-switch {
@@ -76,7 +104,10 @@
                                     Us</a></div>
                         </div>
                         <div class="hero-figure anime-element div-two">
-                            <img class="hero-logo rotate" src="exprosoft-logo.png" alt="Exprosoft Logo">
+                            <div class="hero-logo">
+                                <img class="rotating-image" src="logo-back.png" alt="Rotating Image">
+                                <img class="center-logo" src="logo-transparent.png" alt="Center Logo">
+                            </div>
                             <svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
                                 <rect width="528" height="396" style="fill:transparent;" />
                             </svg>
